@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hindi Notings - Google Docs Viewer</title>
+  <title>Hindi Notings</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cline x1='16' y1='13' x2='8' y2='13'%3E%3C/line%3E%3Cline x1='16' y1='17' x2='8' y2='17'%3E%3C/line%3E%3Cline x1='10' y1='9' x2='8' y2='9'%3E%3C/line%3E%3C/svg%3E">
   <style>
     :root {
       --bg-color: #f8fafc;
@@ -41,38 +42,9 @@
       justify-content: space-between;
       padding: 0 1rem;
       height: 56px;
-      gap: 1.5rem;
+      gap: 1rem;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       z-index: 10;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      user-select: none;
-    }
-
-    .brand-icon {
-      width: 24px;
-      height: 24px;
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .brand-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      gap: 1.5rem;
     }
 
     .tabs-container {
@@ -178,39 +150,26 @@
 </head>
 <body>
   <header>
-    <div class="header-left">
-      <div class="brand">
-        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <line x1="10" y1="9" x2="8" y2="9"></line>
-        </svg>
-        <span class="brand-title">Hindi Notings</span>
-      </div>
-
-      <nav class="tabs-container" role="tablist">
-        <button 
-          id="tab-klw" 
-          class="tab-btn" 
-          role="tab" 
-          aria-selected="false" 
-          onclick="switchTab('klw')"
-        >
-          KLW
-        </button>
-        <button 
-          id="tab-tnpani" 
-          class="tab-btn" 
-          role="tab" 
-          aria-selected="false" 
-          onclick="switchTab('tnpani')"
-        >
-          TNPANI
-        </button>
-      </nav>
-    </div>
+    <nav class="tabs-container" role="tablist">
+      <button 
+        id="tab-klw" 
+        class="tab-btn" 
+        role="tab" 
+        aria-selected="false" 
+        onclick="switchTab('klw')"
+      >
+        KLW
+      </button>
+      <button 
+        id="tab-tnpani" 
+        class="tab-btn" 
+        role="tab" 
+        aria-selected="false" 
+        onclick="switchTab('tnpani')"
+      >
+        TNPANI
+      </button>
+    </nav>
 
     <div class="actions-container">
       <a id="edit-link" href="#" target="_blank" rel="noopener noreferrer" class="edit-btn">
